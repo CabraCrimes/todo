@@ -1,20 +1,15 @@
-import React from 'react'
+import React from "react";
 
-export default function TodoCard() {
-  let todos = [
-    'Go to gym',
-    'Buy milk',
-    'Meeting tomorrow'
-  ]
+export default function TodoCard(props) {
+  const { children } = props;
 
   return (
-    <li className='todoItem'>
-      <div className='actionsContainer'>
-
+    <li className="todoItem">
+      {children}
+      <div className="actionsContainer">
+        <i className="fa-solid fa-pen-to-square"></i>
+        <i className="fa-solid fa-trash"></i>
       </div>
-    
-    <i className="fa-solid fa-pen-to-square"></i>
-    <i className="fa-solid fa-trash"></i>
-  </li>
-  )
+    </li>
+  );
 }
